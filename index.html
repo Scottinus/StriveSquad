@@ -1,0 +1,223 @@
+<!doctype html>
+
+<!--
+
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+
+
+
+    The app is pretty straight forward:
+
+    - The user can add a list of names
+
+    - The user can set the number of teams
+
+    - Every time the user clicks on the "assign" button, a random name is placed in a team and removed from the list
+
+    - Each team should be inside a "column"
+
+    - [EXTRA] Create a button to remove an user from a team, putting him back in the main list
+
+    - [EXTRA] Create a button to reset the state of the app
+
+-->
+
+<html lang="en">
+
+  <head>
+
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+    <!-- Bootstrap -->
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+
+   <!--Autoplay da inserire-->
+
+   <audio loop="" id="audio" src="./audio/SmashTheme.mp3" autoplay=""><!--Autoplay da inserire-->
+    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+    <embed src="./audio/SmashTheme.mp3" loop="true" autostart="true" width="180" hidden="true" height="90">
+    </audio>
+   
+<!--NAVBAR SECTION-->
+<div class="container container-first">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="Ppro Logo" width="50px" height="auto"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" >
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Our Tutors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Ppro</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</div>
+<!--END NAVBAR-->
+
+<!--START CAROUSEL-->
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./StriveCarousel/IVALDO.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/MICHELE.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/RUSHITA.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/YARI.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/LUCA.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/VALERIO.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/NAGI.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/ROB.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/NOAH.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./StriveCarousel/KIRS.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+</div>
+
+</div>
+
+</div>
+
+<!--END CAROUSEL-->
+
+<!--GEN YOUR TEAM-->
+<div class="container" id="genTeam">
+<div class="row justify-content-center">
+    <div class ="col-ms-12">
+    <h2>WELCOME TO Ppro!</h2>
+</div>
+</div>
+<div class="row justify-content-center">
+        <button type="button" class="btn btn-danger" onclick="ShowMode()">START</button>
+</div>
+</div>
+        
+<!--END GEN YOUR TEAM-->
+<!--GEN TABLE-->
+
+    <!--choose mode Window-->
+    <div class="container bg-container" id="modeSection">
+        <div class="row justify-content-center">
+            <div class="col-ms-12">
+                <h2>CREATE YOUR SQUAD!</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12">
+                <div class="bg-col">
+                    <h4>Choose your mode:</h4>
+                </div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-12 col-sm-4 d-flex d-sm-block justify-content-center">
+                <button type="button" class="btn btn-custom marginMode">Brawl</button>
+            </div>
+            <div class="col-12 col-sm-4 d-flex d-sm-block justify-content-center">
+                <button type="button" class="btn btn-custom marginMode">2 SQUADS</button>
+            </div>
+            <div class="col-12 col-sm-4 d-flex d-sm-block justify-content-center">
+                    <button type="button" class="btn btn-custom marginMode">5 SQUADS</button>
+                </div>
+        </div>
+    </div>
+ <!--End choose mode window-->
+
+<!--END GEN TABLE-->
+
+
+
+
+
+   
+
+    <!-- Optional JavaScript -->
+    <script>
+    
+   function ShowMode(){
+
+    document.getElementById("genTeam").style.display = "none";
+
+    document.getElementById("modeSection").style.display = "block";
+    }
+    
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>
